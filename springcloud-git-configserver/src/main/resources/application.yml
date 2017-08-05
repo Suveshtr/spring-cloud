@@ -1,0 +1,34 @@
+---
+server:
+  port: 8888
+security:
+  basic:
+    enabled: true
+  user:
+    name: suvesh
+    password: suvesh123
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false   
+        git:
+          uri: https://github.com/Suveshtr/spring-cloud-config-wa-tolls
+          #username
+          #password
+          ### within station1 and station2 folder inside github.
+          ### valid endpoints 
+          ## http://localhost:8888/s1Rates-dev.json, http://localhost:8888/s1Rates/dev, http://localhost:8888/s1Rates/qa
+          ### within station* folders the properties are stored with file names s1rates-dev.properties variations
+          search-paths:
+          - 'station*'
+          repos:
+            perf:
+              pattern:
+              #http://localhost:8888/s1Rates/perf
+                - "*/perf"
+              uri: https://github.com/Suveshtr/spring-cloud-config-wa-tolls-perf
+              search-paths:
+              - 'station*'   
+          
