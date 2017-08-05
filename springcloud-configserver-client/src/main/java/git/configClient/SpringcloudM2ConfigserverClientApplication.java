@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringcloudM2ConfigserverClientApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(SpringcloudM2ConfigserverClientApplication.class, args);
 	}
 }
